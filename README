@@ -4,9 +4,9 @@
 
 This project analyses sales performance for a Superstore retail business to understand what drives revenue growth and where sales efficiency breaks down using historical sales data.
 
-Although the business shows consistent year-over-year sales growth, profit trends indicate that not all sales contribute equally to sustainable revenue.
+While the business shows consistent year-over-year sales growth, profit trends indicate that not all sales contribute equally to sustainable revenue.
 
-An interactive Excel dashboard was built to analyse sales trends, discount dependency, and loss-making orders. Scenario-based analysis was then used to recommend ways to improve revenue quality without reducing overall sales volume.
+An interactive Excel dashboard was built to analyse sales trends, discount dependency, and loss-making orders. Scenario-based analysis was then used to evaluate ways to improve revenue quality without reducing overall sales volume.
 
 ---
 
@@ -17,7 +17,7 @@ The business is growing sales year over year, but profitability fluctuates due t
 Key questions addressed:
 
 - Which discount levels genuinely support profitable sales growth  
-- How discounts and shipping decisions impact sales outcomes  
+- How discounts and shipping decisions impact outcomes  
 - Where loss-making sales practices occur  
 - How much revenue could potentially be recovered through policy changes  
 
@@ -25,92 +25,107 @@ Key questions addressed:
 
 ## 🧹 Data Cleaning & Preparation
 
-Data cleaning and preparation were carried out using Power Query and Excel.
+Data cleaning and preparation were performed using **Power Query and Excel**.
 
-I began by removing duplicate records to ensure each order was counted only once. Since missing values accounted for less than 1% of the dataset, I removed null values to avoid introducing unnecessary assumptions. I then reviewed the data for inconsistencies, such as irregular entries in categorical fields, and corrected them where required. Date fields were also standardised to ensure consistency for time-based analysis.
+Steps included:
 
-Once the data was clean, I created additional analytical columns in Excel. Discount bands were defined using an IFS formula and grouped into:
+- Removed duplicate records to ensure each order was counted once  
+- Removed null values (less than 1% of records) to avoid distortion  
+- Corrected inconsistencies in categorical fields  
+- Standardised date formats for time-based analysis  
 
-No Discount: 0%
-Low discount: 10%
-Medium discount: 11–29%
-High discount: Above 30%
+Additional analytical columns were created:
 
-A separate column was created to flag loss-making orders, which helped isolate inefficient sales.
+**Discount bands** were defined using an `IFS` formula:
+
+- No Discount — 0%  
+- Low Discount — ≤10%  
+- Medium Discount — 11–29%  
+- High Discount — ≥30%  
+
+A separate flag column was created to identify **loss-making orders**, enabling targeted efficiency analysis.
+
+---
 
 ## 💡 Analysis & Calculations
 
-After preparing the dataset, I performed EDA analysis by using pivot tables and calculated fields for the analysis. Key metrics calculated included:
+Exploratory analysis was conducted using Pivot Tables and calculated fields.
 
-Discounted sales
+Key metrics calculated:
 
-Number of loss-making orders
+- Discounted sales  
+- Number of loss-making orders  
+- Discount dependency %  
+- Year-over-year sales growth  
+- Profit and loss contribution by discount band, region, and shipping mode  
 
-Discount dependency
-
-Year-over-year sales growth
-
-Profit and loss contribution by discount level, region, and shipping mode
-
-These calculations formed the foundation for identifying sales inefficiencies and revenue leakage.
+These calculations formed the basis for identifying sales inefficiencies and revenue leakage.
 
 ---
 
 ## 📈 Key Findings
 
-- Sales show consistent year-over-year growth, indicating strong demand  
+- Sales show consistent year-over-year growth  
 - Technology is the highest revenue-generating category  
 - Over 50% of orders rely on discounts  
 - Low (≤10%) and medium (11–29%) discounts drive sales while remaining largely profitable  
-- **High discounts (≥30%) frequently result in loss-making orders** 
+- **High discounts (≥30%) frequently result in loss-making orders**  
 - Profit percentage fluctuates despite increasing sales  
-- Certain shipping methods combined with high discounts significantly amplify losses  
-- The Central region in 2017 shows a concentration of inefficient, loss-making sales  
+- High discounts combined with certain shipping modes significantly amplify losses  
+- The Central region (2017) shows a concentration of inefficient sales  
 
 ---
 
 ## 📊 Dashboard Design
 
-The final insights were visualised using charts, KPIs, and slicers in Excel. Interactive slicers allow users to explore the data by year, region, category, and discount level. Navigation buttons were added to move between dashboard pages.
+Insights were visualised using charts, KPIs, slicers, and navigation buttons in Excel.
+
+Interactive slicers allow filtering by:
+- Year  
+- Region  
+- Category  
+- Discount band  
+
+Navigation buttons enable movement between dashboard pages.
 
 ### Overall Sales Analysis Page
 
-This page focuses on overall revenue trends, profit behaviour, and how discounts are used to drive sales across regions and categories. It establishes the context by showing that while sales have grown steadily over time, profitability has remained inconsistent.
+Focuses on revenue trends, profit behaviour, and discount usage across regions and categories. It establishes context by showing that sales growth has been steady while profitability remains inconsistent.
 
 ---
 
 ### Loss Drivers Page
 
-The second dashboard page focuses on sales efficiency and loss drivers. It provides a deeper view of:
+Focuses on sales efficiency and loss drivers, including:
 
-- Loss-making orders by discount level  
-- Interaction between discounts and shipping modes  
+- Loss-making orders by discount band  
+- Discount × shipping mode interaction  
 - Regional concentration of inefficient sales  
 - Identification of high-risk discount ranges  
 
-This page supports deeper investigation into why certain sales are unprofitable and helps guide actionable recommendations.
+Designed to support root-cause investigation and action planning.
 
 ---
 
 ## 🔮 Scenario & What-If Analysis
 
-To estimate how much revenue could potentially be recovered, What-If analysis was used to test reductions in high-risk discounts (above 30%).
+What-If analysis was conducted to estimate potential revenue recovery from reducing high-risk discounts (>30%).
 
-Using Excel What-If Data Tables, multiple scenarios were tested to measure how revenue changes when inefficient high discounts are reduced.
+Excel What-If Data Tables were used to simulate multiple reduction scenarios.
 
-Results show:
+Results indicate:
 
 - Reducing high discounts by **20–30%** could recover approximately **4–6% of revenue**  
-- This assumes some demand shifts toward low and medium discount ranges that have historically performed better  
-- When combined with restricting premium shipping for high-discount orders and allowing it only for higher-value purchases, the potential recovery increases further  
+- Assumes demand shifts toward historically effective low and medium discounts  
+- Combining discount controls with restricted premium shipping eligibility further improves recovery potential  
 
-Together, these measures could help recover **around 10% of revenue currently lost** due to inefficient discounting and shipping decisions.
+Together, these measures could recover **~10% of revenue currently lost** due to inefficient discounting and shipping decisions.
 
-These results are scenario-based and intended to guide decision-making, not predict exact outcomes.
+These results are scenario-based and intended to guide decisions, not predict outcomes.
 
 ---
 
-### 📈 Revenue Recovery Scenarios
+## 📈 Revenue Recovery Scenarios
 
 | % Reduction in High Discounts | Recoverable Revenue | Revenue Impact % |
 |------------------------------|---------------------|------------------|
@@ -125,7 +140,7 @@ These results are scenario-based and intended to guide decision-making, not pred
 
 ## ✅ Recommendations
 
-- Cap discounts for low-margin products to prevent profit erosion  
+- Cap discounts for low-margin products  
 - Restrict high-discount orders to cost-efficient shipping modes  
 - Continue controlled use of low and medium discount ranges  
 - Monitor loss-making orders using rule-based indicators  
@@ -144,6 +159,6 @@ These results are scenario-based and intended to guide decision-making, not pred
 ## ⚠️ Notes
 
 - Dataset: Superstore Sales (Kaggle)  
-- Scenario results are assumption-based  
+- Scenario outputs are assumption-based  
 - Focus is on sales efficiency and revenue quality, not demand forecasting  
 
