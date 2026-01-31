@@ -25,10 +25,9 @@ Key questions addressed:
 
 ## 📊 Dataset Overview
 
-Source: Kaggle - Superstore Sales Dataset
-Time period: 2014-2017
-Order-level data including sales, profit, discount, shipping mode,
-category, and region
+- Source: Kaggle - Superstore Sales Dataset
+- Time period: 2014-2017
+- Order-level data including sales, profit, discount, shipping mode, category, and region
 
 ---
 
