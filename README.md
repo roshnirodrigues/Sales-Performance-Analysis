@@ -23,25 +23,26 @@ Key questions addressed:
 
 ---
 
+## 📊 Dataset Overview
+
+Source: Kaggle - Superstore Sales Dataset
+Time period: 2014-2017
+Order-level data including sales, profit, discount, shipping mode,
+category, and region
+
+---
+
 ## 🧹 Data Cleaning & Preparation
 
-Data cleaning and preparation were performed using **Power Query and Excel**.
+Data cleaning and preparation were carried out using Power Query and Excel.
 
-Steps included:
+I began by removing duplicate records to ensure each order was counted only once. Since missing values accounted for less than 1% of the dataset, I removed null values to avoid introducing unnecessary assumptions. I then reviewed the data for inconsistencies, such as irregular entries in categorical fields, and corrected them where required. Date fields were also standardised to ensure consistency for time-based analysis.
 
-- Removed duplicate records to ensure each order was counted once  
-- Removed null values (less than 1% of records) to avoid distortion  
-- Corrected inconsistencies in categorical fields  
-- Standardised date formats for time-based analysis  
-
-Additional analytical columns were created:
-
-**Discount bands** were defined using an `IFS` formula:
-
-- No Discount — 0%  
-- Low Discount — ≤10%  
-- Medium Discount — 11–29%  
-- High Discount — ≥30%  
+Once the data was clean, I created additional analytical columns in Excel. Discount bands were defined using an IFS formula and grouped into:
+- No Discount - 0%  
+- Low Discount - ≤10%  
+- Medium Discount - 11–29%  
+- High Discount - ≥30%  
 
 A separate flag column was created to identify **loss-making orders**, enabling targeted efficiency analysis.
 
@@ -49,15 +50,17 @@ A separate flag column was created to identify **loss-making orders**, enabling 
 
 ## 💡 Analysis & Calculations
 
-Exploratory analysis was conducted using Pivot Tables and calculated fields.
+After preparing the dataset, I performed EDA analysis by using pivot tables and calculated fields for the analysis. Key metrics calculated included:
 
-Key metrics calculated:
+Discounted sales
 
-- Discounted sales  
-- Number of loss-making orders  
-- Discount dependency %  
-- Year-over-year sales growth  
-- Profit and loss contribution by discount band, region, and shipping mode  
+Number of loss-making orders
+
+Discount dependency
+
+Year-over-year sales growth
+
+Profit and loss contribution by discount level, region, and shipping modes.
 
 These calculations formed the basis for identifying sales inefficiencies and revenue leakage.
 
@@ -67,7 +70,7 @@ These calculations formed the basis for identifying sales inefficiencies and rev
 
 - Sales show consistent year-over-year growth  
 - Technology is the highest revenue-generating category  
-- Over 50% of orders rely on discounts  
+- **Over 50% of orders rely on discounts**  
 - Low (≤10%) and medium (11–29%) discounts drive sales while remaining largely profitable  
 - **High discounts (≥30%) frequently result in loss-making orders**  
 - Profit percentage fluctuates despite increasing sales  
@@ -90,7 +93,7 @@ Navigation buttons enable movement between dashboard pages.
 
 ### Overall Sales Analysis Page
 
-Focuses on revenue trends, profit behaviour, and discount usage across regions and categories. It establishes context by showing that sales growth has been steady while profitability remains inconsistent.
+Focuses on revenue trends, profit behaviour, and discount usage across regions and categories. It shows that sales growth has been steady while profitability remains inconsistent.
 
 ---
 
@@ -102,8 +105,6 @@ Focuses on sales efficiency and loss drivers, including:
 - Discount × shipping mode interaction  
 - Regional concentration of inefficient sales  
 - Identification of high-risk discount ranges  
-
-Designed to support root-cause investigation and action planning.
 
 ---
 
