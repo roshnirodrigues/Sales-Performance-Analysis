@@ -1,0 +1,74 @@
+#Sales Performance Analysis (Excel)
+
+##Project Overview
+
+This project analyzes sales performance for a Superstore retail business
+to understand what drives revenue growth and where sales efficiency
+breaks down using historical sales data. While the business shows consistent year-over-year sales growth, profit trends indicate that not all sales contribute equally to sustainable revenue.
+
+An interactive Excel dashboard was built to analyze sales trends,
+discount dependency, and loss-making orders. Scenario-based analysis was
+then used to recommend ways to improve revenue quality without reducing
+sales volume.
+
+##Business Problem
+
+The business is growing its sales year over year, but profitability
+fluctuates due to heavy reliance on discounting. The business needs to understand overall sales performance and identify the factors contributing to unstable profitability. The key challenge is to
+identify:
+
+- Which discount levels genuinely support sales growth.
+- Evaluate the impact of discounts and shipping decisions on sales
+  outcomes.
+- Identify loss-making sales practices and estimate potential revenue
+  recovery.
+
+##Data Cleaning & Preparation
+
+Data cleaning and preparation were carried out using Power Query and Excel.
+
+I began by removing duplicate records to ensure each order was counted only once. Since missing values accounted for less than 1% of the dataset, I removed null values to avoid introducing unnecessary assumptions. I then reviewed the data for inconsistencies, such as irregular entries in categorical fields, and corrected them where required. Date fields were also standardised to ensure consistency for time-based analysis.
+
+Once the data was clean, I created additional analytical columns in Excel. Discount bands were defined using an IFS formula and grouped into:
+
+No Discount: 0%
+Low discount: 10%
+Medium discount: 11–29%
+High discount: Above 30%
+
+A separate column was created to flag loss-making orders, which helped isolate inefficient sales.
+
+##Key Findings
+
+- Sales show consistent year-over-year growth, indicating strong
+  demand.
+- Technology is the highest revenue-generating category and a key
+  driver of sales.
+- Over 50% of orders rely on discounts, making discounting central to
+  sales performance.
+- Low (<=10%) and medium (11-29%) discounts successfully drive sales
+  while remaining largely profitable.
+- High discounts (>=30%) do not proportionally increase sales and
+  frequently result in loss-making orders.
+- Profit percentage fluctuates despite increasing sales.
+- Certain shipping methods combined with high discounts significantly
+  amplify losses.
+- The Central region in 2017 shows a concentration of inefficient,
+  loss-making sales.
+
+##Tools Used
+
+- Microsoft Excel (Pivot Tables, Charts, Slicers)
+- Power Query (data cleaning and transformation)
+- What-If & Scenario Analysis
+- Trend analysis and basic forecasting
+
+##Potential Business Impact
+
+Scenario-based What-If analysis suggests that a combined approach of:
+
+- Capping high-risk discounts, and
+- Restricting premium shipping only for higher Average Order Value
+  (AOV) orders or high discount orders
+ could potentially recover around 10% of revenue currently lost due to
+ inefficient discounting and shipping decisions.
