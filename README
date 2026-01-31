@@ -1,29 +1,29 @@
-#Sales Performance Analysis (Excel)
+# 📊 Sales Performance Analysis (Excel)
 
-##Project Overview
+## 🚀 Project Overview
 
-This project analyzes sales performance for a Superstore retail business
-to understand what drives revenue growth and where sales efficiency
-breaks down using historical sales data. While the business shows consistent year-over-year sales growth, profit trends indicate that not all sales contribute equally to sustainable revenue.
+This project analyses sales performance for a Superstore retail business to understand what drives revenue growth and where sales efficiency breaks down using historical sales data.
 
-An interactive Excel dashboard was built to analyze sales trends,
-discount dependency, and loss-making orders. Scenario-based analysis was
-then used to recommend ways to improve revenue quality without reducing
-sales volume.
+Although the business shows consistent year-over-year sales growth, profit trends indicate that not all sales contribute equally to sustainable revenue.
 
-##Business Problem
+An interactive Excel dashboard was built to analyse sales trends, discount dependency, and loss-making orders. Scenario-based analysis was then used to recommend ways to improve revenue quality without reducing overall sales volume.
 
-The business is growing its sales year over year, but profitability
-fluctuates due to heavy reliance on discounting. The business needs to understand overall sales performance and identify the factors contributing to unstable profitability. The key challenge is to
-identify:
+---
 
-- Which discount levels genuinely support sales growth.
-- Evaluate the impact of discounts and shipping decisions on sales
-  outcomes.
-- Identify loss-making sales practices and estimate potential revenue
-  recovery.
+## 🎯 Business Problem
 
-##Data Cleaning & Preparation
+The business is growing sales year over year, but profitability fluctuates due to heavy reliance on discounting. The objective was to understand overall sales performance and identify the factors contributing to unstable profitability.
+
+Key questions addressed:
+
+- Which discount levels genuinely support profitable sales growth  
+- How discounts and shipping decisions impact sales outcomes  
+- Where loss-making sales practices occur  
+- How much revenue could potentially be recovered through policy changes  
+
+---
+
+## 🧹 Data Cleaning & Preparation
 
 Data cleaning and preparation were carried out using Power Query and Excel.
 
@@ -38,37 +38,112 @@ High discount: Above 30%
 
 A separate column was created to flag loss-making orders, which helped isolate inefficient sales.
 
-##Key Findings
+## 💡 Analysis & Calculations
 
-- Sales show consistent year-over-year growth, indicating strong
-  demand.
-- Technology is the highest revenue-generating category and a key
-  driver of sales.
-- Over 50% of orders rely on discounts, making discounting central to
-  sales performance.
-- Low (<=10%) and medium (11-29%) discounts successfully drive sales
-  while remaining largely profitable.
-- High discounts (>=30%) do not proportionally increase sales and
-  frequently result in loss-making orders.
-- Profit percentage fluctuates despite increasing sales.
-- Certain shipping methods combined with high discounts significantly
-  amplify losses.
-- The Central region in 2017 shows a concentration of inefficient,
-  loss-making sales.
+After preparing the dataset, I performed EDA analysis by using pivot tables and calculated fields for the analysis. Key metrics calculated included:
 
-##Tools Used
+Discounted sales
 
-- Microsoft Excel (Pivot Tables, Charts, Slicers)
-- Power Query (data cleaning and transformation)
-- What-If & Scenario Analysis
-- Trend analysis and basic forecasting
+Number of loss-making orders
 
-##Potential Business Impact
+Discount dependency
 
-Scenario-based What-If analysis suggests that a combined approach of:
+Year-over-year sales growth
 
-- Capping high-risk discounts, and
-- Restricting premium shipping only for higher Average Order Value
-  (AOV) orders or high discount orders
- could potentially recover around 10% of revenue currently lost due to
- inefficient discounting and shipping decisions.
+Profit and loss contribution by discount level, region, and shipping mode
+
+These calculations formed the foundation for identifying sales inefficiencies and revenue leakage.
+
+---
+
+## 📈 Key Findings
+
+- Sales show consistent year-over-year growth, indicating strong demand  
+- Technology is the highest revenue-generating category  
+- Over 50% of orders rely on discounts  
+- Low (≤10%) and medium (11–29%) discounts drive sales while remaining largely profitable  
+- **High discounts (≥30%) frequently result in loss-making orders** 
+- Profit percentage fluctuates despite increasing sales  
+- Certain shipping methods combined with high discounts significantly amplify losses  
+- The Central region in 2017 shows a concentration of inefficient, loss-making sales  
+
+---
+
+## 📊 Dashboard Design
+
+The final insights were visualised using charts, KPIs, and slicers in Excel. Interactive slicers allow users to explore the data by year, region, category, and discount level. Navigation buttons were added to move between dashboard pages.
+
+### Overall Sales Analysis Page
+
+This page focuses on overall revenue trends, profit behaviour, and how discounts are used to drive sales across regions and categories. It establishes the context by showing that while sales have grown steadily over time, profitability has remained inconsistent.
+
+---
+
+### Loss Drivers Page
+
+The second dashboard page focuses on sales efficiency and loss drivers. It provides a deeper view of:
+
+- Loss-making orders by discount level  
+- Interaction between discounts and shipping modes  
+- Regional concentration of inefficient sales  
+- Identification of high-risk discount ranges  
+
+This page supports deeper investigation into why certain sales are unprofitable and helps guide actionable recommendations.
+
+---
+
+## 🔮 Scenario & What-If Analysis
+
+To estimate how much revenue could potentially be recovered, What-If analysis was used to test reductions in high-risk discounts (above 30%).
+
+Using Excel What-If Data Tables, multiple scenarios were tested to measure how revenue changes when inefficient high discounts are reduced.
+
+Results show:
+
+- Reducing high discounts by **20–30%** could recover approximately **4–6% of revenue**  
+- This assumes some demand shifts toward low and medium discount ranges that have historically performed better  
+- When combined with restricting premium shipping for high-discount orders and allowing it only for higher-value purchases, the potential recovery increases further  
+
+Together, these measures could help recover **around 10% of revenue currently lost** due to inefficient discounting and shipping decisions.
+
+These results are scenario-based and intended to guide decision-making, not predict exact outcomes.
+
+---
+
+### 📈 Revenue Recovery Scenarios
+
+| % Reduction in High Discounts | Recoverable Revenue | Revenue Impact % |
+|------------------------------|---------------------|------------------|
+| 10% | 17,661.96 | 1.6% |
+| 15% | 26,492.94 | 2.4% |
+| 20% | 35,323.92 | 3.2% |
+| 25% | 44,154.90 | 4.0% |
+| 30% | 52,985.88 | 4.8% |
+| 40% | 70,647.84 | 6.4% |
+
+---
+
+## ✅ Recommendations
+
+- Cap discounts for low-margin products to prevent profit erosion  
+- Restrict high-discount orders to cost-efficient shipping modes  
+- Continue controlled use of low and medium discount ranges  
+- Monitor loss-making orders using rule-based indicators  
+
+---
+
+## 🛠️ Tools Used
+
+- Microsoft Excel — Pivot Tables, Charts, Slicers  
+- Power Query — data cleaning and transformation  
+- What-If & Scenario Analysis  
+- Trend analysis and basic forecasting  
+
+---
+
+## ⚠️ Notes
+
+- Dataset: Superstore Sales (Kaggle)  
+- Scenario results are assumption-based  
+- Focus is on sales efficiency and revenue quality, not demand forecasting  
+
