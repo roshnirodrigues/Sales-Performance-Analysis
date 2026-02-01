@@ -76,7 +76,7 @@ These calculations formed the basis for identifying sales inefficiencies and rev
 - **Over 50% of orders rely on discounts**  
 - Low (≤10%) and medium (11–29%) discounts drive sales while remaining largely profitable  
 - **High discounts (≥30%) frequently result in loss-making orders**  
-- Profit percentage fluctuates despite increasing sales  
+- **Profit percentage fluctuates despite increasing sales**  
 - High discounts combined with certain shipping modes significantly amplify losses  
 - The Central region (2017) shows a concentration of inefficient sales  
 
@@ -97,6 +97,11 @@ Navigation buttons enable movement between dashboard pages.
 ### Overall Sales Analysis Page
 
 Focuses on revenue trends, profit behaviour, and discount usage across regions and categories. It shows that sales growth has been steady while profitability remains inconsistent.
+<p align="left">
+  <img src="images/Sales Analysis - Overview.png" width="800">
+<p align="right">
+  <img src="images/Sales Analysis - Light.png" width="500">
+</p>
 
 ---
 
@@ -107,7 +112,11 @@ Focuses on sales efficiency and loss drivers, including:
 - Loss-making orders by discount band  
 - Discount × shipping mode interaction  
 - Regional concentration of inefficient sales  
-- Identification of high-risk discount ranges  
+- Identification of high-risk discount ranges
+  
+<p align="center">
+  <img src="images/Sales Analysis - Loss Drivers.png" width="800">
+</p>
 
 ---
 
