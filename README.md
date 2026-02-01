@@ -97,10 +97,9 @@ Navigation buttons enable movement between dashboard pages.
 ### Overall Sales Analysis Page
 
 Focuses on revenue trends, profit behaviour, and discount usage across regions and categories. It shows that sales growth has been steady while profitability remains inconsistent.
-<p align="left">
-  <img src="images/Sales Analysis - Overview.png" width="450">
-<p align="right">
-  <img src="images/Sales Analysis - Light.png" width="450">
+<p align="centre">
+  <img src="images/Sales Analysis - Overview.png" width="45%">
+  <img src="images/Sales Analysis - Light.png" width="45%">
 </p>
 
 ---
@@ -115,7 +114,7 @@ Focuses on sales efficiency and loss drivers, including:
 - Identification of high-risk discount ranges
   
 <p align="center">
-  <img src="images/Sales Analysis - Loss Drivers.png" width="800">
+  <img src="images/Sales Analysis - Loss Drivers.png" width="700">
 </p>
 
 ---
