@@ -1,7 +1,7 @@
 # 📊 Sales Performance Analysis (Excel)
 
 <p align="center">
-  <img src="images/Sales Analysis - Overview.png" width="500">
+  <img src="images/Sales Analysis - Overview.png" width="700">
 </p>
 
 ## 🚀 Project Overview
