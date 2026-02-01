@@ -99,7 +99,7 @@ Navigation buttons enable movement between dashboard pages.
 Focuses on revenue trends, profit behaviour, and discount usage across regions and categories. It shows that sales growth has been steady while profitability remains inconsistent.
 <p align="centre">
   <img src="images/Sales Analysis - Overview.png" width="50%">
-  <img src="images/Sales Analysis - Light.png" width="45%">
+  <img src="images/Sales Analysis - Light.png" width="49%">
 </p>
 
 ---
