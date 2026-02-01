@@ -1,5 +1,9 @@
 # 📊 Sales Performance Analysis (Excel)
 
+<p align="center">
+  <img src="images/Sales Analysis - Overview.png" width="500">
+</p>
+
 ## 🚀 Project Overview
 
 This project analyses sales performance for a Superstore retail business to understand what drives revenue growth and where sales efficiency breaks down using historical sales data.
